@@ -1,0 +1,18 @@
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.signup-container label, .signup-container input, .signup-container button {
+  /*margin-bottom: 10px;*/
+}
+
+#back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
