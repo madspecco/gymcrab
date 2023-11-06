@@ -1,1 +1,14 @@
-<p>activity-screen works!</p>
+<button id="back-button" (click)="goTo('goal-screen')"><</button>
+
+<div class="selection-div">
+  <h2>What is your activity level on a daily basis?</h2>
+  <h3>(workouts don't count, silly)</h3>
+  <div class="button-div">
+    <button id="lazy" class="selectable-btn">Lazy</button>
+    <button id="not-so-lazy" class="selectable-btn">Not So lazy</button>
+    <button id="active" class="selectable-btn">Active</button>
+    <button id="hyper" class="selectable-btn">Hyperactive</button>
+  </div>
+</div>
+
+<button id="next" (click)="goTo('activity-screen')">Next</button>
