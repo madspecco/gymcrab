@@ -11,8 +11,9 @@ export class StartingScreenComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToSignup() {
-    this.router.navigate(['/signup-screen']);
+
+  goTo(destination: string) {
+    this.router.navigate([`/${destination}`]);
   }
 
 }
