@@ -1,1 +1,24 @@
-<p>biometrics-screen works!</p>
+<button id="back-button" (click)="goTo('activity-screen')"><</button>
+
+<div class="selection-div">
+  <h2>Now, you need to tell me about yourself</h2>
+  <h3>Sex</h3>
+  <div class="sex-btn">
+    <button class="option" id="male">Male</button>
+    <button class="option" id="female">Female</button>
+  </div>
+
+  <h3>How old are you?</h3>
+  <input type="number" id="age" name="age" placeholder="Enter your age" min="0">
+
+  <h3>Tell me your weight</h3>
+  <input type="number" id="height" name="age" placeholder="Enter your weight" min="0">
+
+  <h3>Tell me your height</h3>
+  <input type="number" id="weight" name="age" placeholder="Enter your height" min="0">
+
+  <h3>Finally, what is your desired weight?</h3>
+  <input type="number" id="desired-weight" name="age" placeholder="Enter your desired weight" min="0">
+</div>
+
+<button id="next" (click)="goTo('biometrics-screen')">Next</button>
