@@ -5,6 +5,7 @@ import { StartingScreenComponent } from "./starting-screen/starting-screen.compo
 import { SignupScreenComponent } from "./signup-screen/signup-screen.component";
 import {GoalScreenComponent} from "./goal-screen/goal-screen.component";
 import {ActivityScreenComponent} from "./activity-screen/activity-screen.component";
+import {BiometricsScreenComponent} from "./biometrics-screen/biometrics-screen.component";
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'goal-screen', component: GoalScreenComponent },
   { path: 'signup-screen', component: SignupScreenComponent },
   { path: 'activity-screen', component: ActivityScreenComponent },
+  { path: 'biometrics-screen', component: BiometricsScreenComponent },
 ]
 @NgModule({
   declarations: [],

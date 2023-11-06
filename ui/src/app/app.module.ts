@@ -7,6 +7,7 @@ import { SignupScreenComponent } from './signup-screen/signup-screen.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GoalScreenComponent } from './goal-screen/goal-screen.component';
 import { ActivityScreenComponent } from './activity-screen/activity-screen.component';
+import { BiometricsScreenComponent } from './biometrics-screen/biometrics-screen.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ActivityScreenComponent } from './activity-screen/activity-screen.compo
     StartingScreenComponent,
     SignupScreenComponent,
     GoalScreenComponent,
-    ActivityScreenComponent
+    ActivityScreenComponent,
+    BiometricsScreenComponent
   ],
   imports: [
     BrowserModule,
