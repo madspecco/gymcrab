@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-goal-screen',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./goal-screen.component.css']
 })
 export class GoalScreenComponent {
+  constructor(private router: Router) {}
 
+  goBack() {
+    this.router.navigate(['/']);
+  }
 }
