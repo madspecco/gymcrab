@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
 export class SignupScreenComponent {
   constructor(private router: Router) {}
 
-  goBack() {
-    this.router.navigate(['/']);
+  goTo(destination: string) {
+    this.router.navigate([`/${destination}`]);
   }
 }

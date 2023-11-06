@@ -1,9 +1,12 @@
-<button id="back-button" (click)="goBack()"><</button>
+<button id="back-button" (click)="goTo('biometrics-screen')"><</button>
 
 <div class="signup-container">
-  <label>Email:</label>
-  <input type="text" id="email" name="email">
-  <label for="pwd">Password:</label>
-  <input type="password" id="pwd" name="pwd">
-  <button>Register</button>
+  <h2>We're almost done! Now all you gotta do is register.</h2>
+  <h3>Username</h3>
+  <input type="text" id="user" name="user" placeholder="Create username" min="0">
+
+  <h3>Password</h3>
+  <input type="password" id="pwd" name="pwd" placeholder="Create password">
 </div>
+
+<button id="register" (click)="goTo('')">Register</button>
