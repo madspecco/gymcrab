@@ -6,13 +6,15 @@ import { StartingScreenComponent } from './starting-screen/starting-screen.compo
 import { SignupScreenComponent } from './signup-screen/signup-screen.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GoalScreenComponent } from './goal-screen/goal-screen.component';
+import { ActivityScreenComponent } from './activity-screen/activity-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartingScreenComponent,
     SignupScreenComponent,
-    GoalScreenComponent
+    GoalScreenComponent,
+    ActivityScreenComponent
   ],
   imports: [
     BrowserModule,

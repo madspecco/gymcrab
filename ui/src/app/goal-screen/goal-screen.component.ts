@@ -12,4 +12,8 @@ export class GoalScreenComponent {
   goBack() {
     this.router.navigate(['/']);
   }
+
+  goTo(destination: string) {
+    this.router.navigate([`/${destination}`]);
+  }
 }
