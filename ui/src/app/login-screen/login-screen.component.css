@@ -1,0 +1,45 @@
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: antiquewhite;
+  border: none;
+}
+
+h2, h3 {
+  color: #f77f00;
+}
+
+#back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#user, #pwd, #register {
+  border: 2px solid #f77f00;
+  border-radius: 4px;
+  width: 200px;
+  height: 32px;
+  color: #f77f00;
+  text-align: center;
+  user-select: none;
+  background-color: antiquewhite;
+}
+
+#user::placeholder, #pwd::placeholder {
+  color: #f77f00;
+}
+
+#user:focus, #pwd:focus {
+  outline: 1px solid #f77f00;
+}
+
+#register {
+  position: absolute;
+  left: 50%;
+  bottom: 1px;
+  transform: translate(-50%, -50%);
+}
