@@ -10,6 +10,7 @@ import { ActivityScreenComponent } from './activity-screen/activity-screen.compo
 import { BiometricsScreenComponent } from './biometrics-screen/biometrics-screen.component';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
 import { MainScreenComponent } from './main-screen/main-screen.component';
+import { WorkoutsScreenComponent } from './workouts-screen/workouts-screen.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MainScreenComponent } from './main-screen/main-screen.component';
     ActivityScreenComponent,
     BiometricsScreenComponent,
     LoginScreenComponent,
-    MainScreenComponent
+    MainScreenComponent,
+    WorkoutsScreenComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import {ActivityScreenComponent} from "./activity-screen/activity-screen.compone
 import {BiometricsScreenComponent} from "./biometrics-screen/biometrics-screen.component";
 import {LoginScreenComponent} from "./login-screen/login-screen.component";
 import {MainScreenComponent} from "./main-screen/main-screen.component";
+import {WorkoutsScreenComponent} from "./workouts-screen/workouts-screen.component";
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'activity-screen', component: ActivityScreenComponent },
   { path: 'biometrics-screen', component: BiometricsScreenComponent },
   { path: 'login-screen', component: LoginScreenComponent },
-  { path: 'main-screen', component: MainScreenComponent }
+  { path: 'main-screen', component: MainScreenComponent },
+  { path: 'workouts-screen', component: WorkoutsScreenComponent}
 ]
 @NgModule({
   declarations: [],
