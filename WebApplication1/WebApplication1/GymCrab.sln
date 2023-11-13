@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GymCrab", "WebApplication1\GymCrab.csproj", "{8C38768E-1439-4A38-88AF-0845181F50F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{44DA444F-4B9F-4F35-A26B-38CF7448D73F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C38768E-1439-4A38-88AF-0845181F50F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C38768E-1439-4A38-88AF-0845181F50F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C38768E-1439-4A38-88AF-0845181F50F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C38768E-1439-4A38-88AF-0845181F50F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EC962F5-4990-4ADF-AE2E-AA3E6CB3528B}
+	EndGlobalSection
+EndGlobal
