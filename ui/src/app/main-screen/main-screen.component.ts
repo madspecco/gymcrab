@@ -15,4 +15,11 @@ export class MainScreenComponent {
   goTo(destination: string) {
     this.router.navigate([`/${destination}`]);
   }
+
+  // method and variable for the slider functionality
+  showSlider: boolean = false;
+  toggleSlider() {
+    this.showSlider = !this.showSlider;
+    console.log('Slider toggled: ', this.showSlider); // Use this log to troubleshoot
+  }
 }
