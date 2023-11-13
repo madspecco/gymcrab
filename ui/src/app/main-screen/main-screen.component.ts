@@ -8,8 +8,6 @@ import {Router} from "@angular/router";
 })
 export class MainScreenComponent {
   constructor(private router: Router) {}
-  ngOnInit(): void {
-  }
 
 
   goTo(destination: string) {

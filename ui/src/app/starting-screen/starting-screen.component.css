@@ -26,6 +26,7 @@ button {
   border: none;
   width: 150px;
   height: 32px;
+  font-size: 18px;
 }
 
 .signup-button{
