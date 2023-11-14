@@ -23,7 +23,7 @@ h2, h3 {
   /*overflow: hidden;*/
 }
 
-.option, #age, #height, #weight, #desired-weight, #next {
+.sex, #age, #height, #weight, #desired-weight, #next {
   border: 2px solid #f77f00;
   border-radius: 4px;
   width: 200px;
@@ -32,6 +32,20 @@ h2, h3 {
   text-align: center;
   user-select: none;
   background-color: antiquewhite;
+}
+
+.sex {
+  border-radius: 0;
+  font-size: 18px;
+
+}
+
+.selected-sex {
+  width: 200px;
+  height: 32px;
+  color: antiquewhite;
+  border-style: solid;
+  background-color: #f77f00;
 }
 
 #age::placeholder, #height::placeholder, #weight::placeholder, #desired-weight::placeholder {
@@ -47,4 +61,9 @@ h2, h3 {
   left: 50%;
   bottom: 1px;
   transform: translate(-50%, -50%);
+  border-radius: 4px;
+  border: none;
+  color: antiquewhite;
+  background-color: #f77f00;
+  font-size: 18px;
 }

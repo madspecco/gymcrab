@@ -4,8 +4,8 @@
   <h2>Now, you need to tell me about yourself</h2>
   <h3>Sex</h3>
   <div class="sex-btn">
-    <button class="option" id="male">Male</button>
-    <button class="option" id="female">Female</button>
+    <button class="sex" id="male" (click)="changeClass($event)">M</button>
+    <button class="sex" id="female" (click)="changeClass($event)">F</button>
   </div>
 
   <h3>How old are you?</h3>
@@ -21,4 +21,4 @@
   <input type="number" id="desired-weight" name="age" placeholder="Enter your desired weight" min="0">
 </div>
 
-<button id="next" (click)="goTo('signup-screen')">Next</button>
+<button id="next" (click)="goTo('signup-screen')">NEXT</button>

@@ -18,7 +18,7 @@ h2, h3 {
   left: 10px;
 }
 
-#user, #pwd, #register {
+#user, #pwd, #login {
   border: 2px solid #f77f00;
   border-radius: 4px;
   width: 200px;
@@ -37,9 +37,14 @@ h2, h3 {
   outline: 1px solid #f77f00;
 }
 
-#register {
+#login {
   position: absolute;
   left: 50%;
   bottom: 1px;
   transform: translate(-50%, -50%);
+  border-radius: 4px;
+  border: none;
+  color: antiquewhite;
+  background-color: #f77f00;
+  font-size: 18px;
 }
