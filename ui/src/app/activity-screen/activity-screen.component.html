@@ -4,11 +4,11 @@
   <h2>What is your activity level on a daily basis?</h2>
   <h3>(workouts don't count, silly)</h3>
   <div class="button-div">
-    <button id="lazy" class="selectable-btn">Lazy</button>
-    <button id="not-so-lazy" class="selectable-btn">Not So lazy</button>
-    <button id="active" class="selectable-btn">Active</button>
-    <button id="hyper" class="selectable-btn">Hyperactive</button>
+    <button class="selection-btns" (click)="changeClass($event)">Lazy</button>
+    <button class="selection-btns" (click)="changeClass($event)">Not So lazy</button>
+    <button class="selection-btns" (click)="changeClass($event)">Active</button>
+    <button class="selection-btns" (click)="changeClass($event)">Hyperactive</button>
   </div>
 </div>
 
-<button id="next" (click)="goTo('biometrics-screen')">Next</button>
+<button id="next" (click)="goTo('biometrics-screen')">NEXT</button>

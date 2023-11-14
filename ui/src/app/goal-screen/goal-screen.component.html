@@ -1,12 +1,12 @@
-<button id="back-button" (click)="goBack()"><</button>
+<button id="back-button" (click)="goTo('')"><</button>
 
 <div class="selection-div">
   <h2>Choose your goal</h2>
   <div class="button-div">
-    <button id="loss" class="selectable-btn">Weight Loss</button>
-    <button id="maintain" class="selectable-btn">Maintenance</button>
-    <button id="gain" class="selectable-btn">Weight Gain</button>
+    <button class="selection-btns" (click)="changeClass($event)">Weight Loss</button>
+    <button class="selection-btns" (click)="changeClass($event)">Maintenance</button>
+    <button class="selection-btns" (click)="changeClass($event)">Weight Gain</button>
   </div>
 </div>
 
-<button id="next" (click)="goTo('activity-screen')">Next</button>
+<button id="next" (click)="goTo('activity-screen')">NEXT</button>

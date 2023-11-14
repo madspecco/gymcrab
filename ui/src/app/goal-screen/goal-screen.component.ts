@@ -8,12 +8,22 @@ import {Router} from "@angular/router";
 })
 export class GoalScreenComponent {
   constructor(private router: Router) {}
-
-  goBack() {
-    this.router.navigate(['/']);
-  }
-
   goTo(destination: string) {
     this.router.navigate([`/${destination}`]);
+  }
+
+
+  // button select functionality
+  changeClass(event: Event) {
+    const clickedButton = event.target as HTMLButtonElement;
+
+    // remove 'selected' class from all buttons
+    const buttons = document.querySelectorAll('.selection-btns') as NodeListOf<HTMLButtonElement>;
+    buttons.forEach((button) => {
+      button.classList.remove('selected');
+    });
+
+    // add 'selected' class to the clicked button
+    clickedButton.classList.add('selected');
   }
 }

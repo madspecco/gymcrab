@@ -1,3 +1,9 @@
+#back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;

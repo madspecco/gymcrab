@@ -12,4 +12,18 @@ export class ActivityScreenComponent {
   goTo(destination: string) {
     this.router.navigate([`/${destination}`]);
   }
+
+  // button select functionality
+  changeClass(event: Event) {
+    const clickedButton = event.target as HTMLButtonElement;
+
+    // remove 'selected' class from all buttons
+    const buttons = document.querySelectorAll('.selection-btns') as NodeListOf<HTMLButtonElement>;
+    buttons.forEach((button) => {
+      button.classList.remove('selected');
+    });
+
+    // add 'selected' class to the clicked button
+    clickedButton.classList.add('selected');
+  }
 }
