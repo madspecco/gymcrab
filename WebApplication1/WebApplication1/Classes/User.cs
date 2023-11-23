@@ -6,6 +6,7 @@ namespace WebApplication1.Classes
     public class User
     {
         private WorkoutManager workoutManager;
+        private CrabEntity crabEntity;
 
         public Guid UserId { get; set; }
         public string Username { get; set; }
@@ -39,6 +40,12 @@ namespace WebApplication1.Classes
             WeightInKilograms = 50;
             Sex = 1;
             workoutManager = new WorkoutManager(); // Initialize a new WorkoutManager
+            crabEntity = new CrabEntity();
+        }
+
+        public CrabEntity GetCrabEntity()
+        {
+            return crabEntity;
         }
 
     }

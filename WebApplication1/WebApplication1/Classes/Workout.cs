@@ -3,10 +3,12 @@
     class Workout
     {
         public List<Exercise> Exercises { get; private set; }
+        public DateTime WorkoutDate { get; private set; }
 
-        public Workout()
+        public Workout(DateTime workoutDate)
         {
             Exercises = new List<Exercise>();
+            WorkoutDate = workoutDate;
         }
 
         public void AddExercise(Exercise exercise)
@@ -29,5 +31,6 @@
             return totalCaloriesBurned;
         }
     }
+
 
 }
