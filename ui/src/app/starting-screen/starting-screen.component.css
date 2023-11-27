@@ -44,3 +44,10 @@ img {
   height: 256px;
 }
 
+#back-button {
+  border: none;
+  color: #f77f00;
+  background-color: antiquewhite;
+  font-weight: bold;
+  font-size: 20px;
+}
