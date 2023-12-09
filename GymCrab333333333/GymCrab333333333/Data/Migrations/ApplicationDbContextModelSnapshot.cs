@@ -22,6 +22,39 @@ namespace GymCrab333333333.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("GymCrab333333333.Models.Exercise", b =>
+                {
+                    b.Property<int>("ExerciseId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ExerciseId"), 1L, 1);
+
+                    b.Property<int>("Duration")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ExerciseType")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Reps")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Sets")
+                        .HasColumnType("int");
+
+                    b.Property<double>("WeightUsed")
+                        .HasColumnType("float");
+
+                    b.Property<int>("WorkoutId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ExerciseId");
+
+                    b.HasIndex("WorkoutId");
+
+                    b.ToTable("Exercise");
+                });
+
             modelBuilder.Entity("GymCrab333333333.Models.Joke", b =>
                 {
                     b.Property<int>("Id")
@@ -41,6 +74,25 @@ namespace GymCrab333333333.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Joke");
+                });
+
+            modelBuilder.Entity("GymCrab333333333.Models.Workout", b =>
+                {
+                    b.Property<int>("WorkoutId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("WorkoutId"), 1L, 1);
+
+                    b.Property<DateTime>("WorkoutDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("WorkoutManagerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("WorkoutId");
+
+                    b.ToTable("Workout");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -245,6 +297,17 @@ namespace GymCrab333333333.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("GymCrab333333333.Models.Exercise", b =>
+                {
+                    b.HasOne("GymCrab333333333.Models.Workout", "Workout")
+                        .WithMany("Exercises")
+                        .HasForeignKey("WorkoutId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Workout");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -294,6 +357,11 @@ namespace GymCrab333333333.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("GymCrab333333333.Models.Workout", b =>
+                {
+                    b.Navigation("Exercises");
                 });
 #pragma warning restore 612, 618
         }
