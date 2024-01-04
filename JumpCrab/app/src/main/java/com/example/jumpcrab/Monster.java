@@ -41,5 +41,34 @@ public class Monster extends Entity {
         }
     }
 
+    /**
+     * Check if the player has collided with this monster
+     * @return true if player has collided with monster; false otherwise
+     */
+    public boolean updateMonsterPlayerCollision(float playerX, float playerY) {
+        //Get actual distance (without square root) between player and the monster being checked
+        float distanceBetweenPlayerAndMonster = (xPos - playerX) * (xPos - playerX) +
+                (yPos - playerY) *(yPos - playerY);
+
+        //Check if the actual distance is lower than the allowed => collision
+        return minDistanceBetweenPlayerAndMonster >= distanceBetweenPlayerAndMonster;
+    }
+
+    /**
+     * Tell the caller whether to create a monster, based on the
+     * {@code chanceToSpawnMonster} variable
+     * @return true if a monster should be spawned; false otherwise
+     */
+    public static boolean doGenerateMonster(){
+        return randomGen.nextInt(chanceToSpawnMonster) == 0;
+    }
+
+    /**
+     * Tell the caller whether to let the monster move (50% chance)
+     * @return true if the monster should move; false otherwise
+     */
+    public static boolean doSetMoving() {
+        return randomGen.nextInt(2) == 0;
+    }
 }
 

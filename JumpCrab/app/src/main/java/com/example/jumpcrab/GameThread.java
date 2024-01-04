@@ -87,7 +87,7 @@ public abstract class GameThread extends Thread {
 
     /*
      * Called when app is destroyed, so not really that important here
-     * Possibly Memory leak
+     * Memory leak
      */
     public void cleanup() {
         this.mContext = null;
