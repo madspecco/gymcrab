@@ -100,24 +100,39 @@ public class TheGame extends GameThread{
         mMonster = Bitmap.createScaledBitmap(monster, (int)(monster.getWidth()*0.5),
                 (int)(monster.getHeight()*0.5) , true);
 
-        //Prepare the image of the platforms
+//Prepare the image of the platforms
         if(mLevel.platformType == PLATFORM_CANDY) {
+            mScrollingBackground = BitmapFactory.decodeResource
+                    (gameView.getContext().getResources(),
+                            R.drawable.background_candy);
             mPlatform = BitmapFactory.decodeResource
                     (gameView.getContext().getResources(),
                             R.drawable.zigzagcandy_half_round);
         } else if(mLevel.platformType == PLATFORM_SNOW) {
+            mScrollingBackground = BitmapFactory.decodeResource
+                    (gameView.getContext().getResources(),
+                            R.drawable.background_snow);
             mPlatform = BitmapFactory.decodeResource
                     (gameView.getContext().getResources(),
                             R.drawable.wavesnow_half_round);
         } else if(mLevel.platformType == PLATFORM_GRASS) {
+            mScrollingBackground = BitmapFactory.decodeResource
+                    (gameView.getContext().getResources(),
+                            R.drawable.background_forest);
             mPlatform = BitmapFactory.decodeResource
                     (gameView.getContext().getResources(),
                             R.drawable.zigzaggrass_half_round);
         } else if(mLevel.platformType == PLATFORM_DESERT) {
+            mScrollingBackground = BitmapFactory.decodeResource
+                    (gameView.getContext().getResources(),
+                            R.drawable.background_desert);
             mPlatform = BitmapFactory.decodeResource
                     (gameView.getContext().getResources(),
                             R.drawable.wavedesert_half_round);
         } else if(mLevel.platformType == PLATFORM_YELLOW) {
+            mScrollingBackground = BitmapFactory.decodeResource
+                    (gameView.getContext().getResources(),
+                            R.drawable.background);
             mPlatform = BitmapFactory.decodeResource
                     (gameView.getContext().getResources(),
                             R.drawable.zigzagyellow_half_round);
@@ -129,7 +144,6 @@ public class TheGame extends GameThread{
         //Tell level which bitmap is being used for platforms
         mLevel.platformBitmap = mPlatform;
     }
-
     /**This is run before a new game (also after an old game)*/
     @Override
     public void setupBeginning() {
@@ -330,6 +344,33 @@ public class TheGame extends GameThread{
                     iterator.remove();
             }
 
+            //Move the platforms that move
+            for (Platform p : mLevel.platforms) {
+                if (p.isAMovingPlatform) {
+                    p.xPos = p.xPos + secondsElapsed * p.xSpeed;
+                    p.yPos = p.yPos + secondsElapsed * p.ySpeed;
+                    //if a monster hits edge of screen, reverse its speed in the x direction
+                    if (p.xPos - p.bitmap.getWidth() / 2 <= 0 ||
+                            p.xPos + p.bitmap.getWidth() / 2 >= mCanvasWidth) {
+                        p.xSpeed = -p.xSpeed;
+                    }
+                }
+            }
+
+            //Move the monsters that move
+            if (mLevel.monsters != null) {
+                for (Monster m : mLevel.monsters) {
+                    if (m.isAMovingMonster) {
+                        m.xPos = m.xPos + secondsElapsed * m.xSpeed;
+                        m.yPos = m.yPos + secondsElapsed * m.ySpeed;
+                        //if a monster hits edge of screen, reverse its speed in the x direction
+                        if (m.xPos - m.bitmap.getWidth() / 2 <= 0 ||
+                                m.xPos + m.bitmap.getWidth() / 2 >= mCanvasWidth) {
+                            m.xSpeed = -m.xSpeed;
+                        }
+                    }
+                }
+            }
 
             //Update score and remove monster if a bullet hits a monster
             //return iterator to start of mBullets ArrayList
@@ -405,6 +446,17 @@ public class TheGame extends GameThread{
             }
         }
     }
+
+    //scroll smooth algorithms
+    //call do draw many tmes
+    //edit updategame()
+    //if(counter > 0)
+    //counter--;
+    //suspend user functions
+    //move objects down
+    //else {
+    //current update game
+    //}
 
     /**
      * Check to see if the player has landed on a platform
