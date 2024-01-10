@@ -1,4 +1,4 @@
-# The Gym Crab Fitness Tracker
-##### Your new passive-aggressive friend and fitness tracker.
-###### As friendly as an IT Crab
+# JumpCrab
+#### Simple and fun endless jumper 
+
 
