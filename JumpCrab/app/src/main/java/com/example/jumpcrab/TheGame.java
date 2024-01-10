@@ -132,7 +132,7 @@ public class TheGame extends GameThread{
         } else if(mLevel.platformType == PLATFORM_YELLOW) {
             mScrollingBackground = BitmapFactory.decodeResource
                     (gameView.getContext().getResources(),
-                            R.drawable.background);
+                            R.drawable.background_spooky);
             mPlatform = BitmapFactory.decodeResource
                     (gameView.getContext().getResources(),
                             R.drawable.zigzagyellow_half_round);
